@@ -9,7 +9,7 @@ const car = {
 };
 
 
-const isFast = false;
+const isFast = true;
 
 function addIsFast(car) {
   if (car.speed > 100) {
