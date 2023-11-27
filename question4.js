@@ -22,10 +22,10 @@ function calculateTotalPrice2(shoppingCart, prices) {
 
   let sum = 0;
 
-  shoppingCart.forEach(model => {
-    sum += model[prices];
+  shoppingCart.forEach((item) => {
+    if (item.model === prices)
+      sum += prices
   })
-  return sum;
 }
 
 console.log(calculateTotalPrice2(shoppingCart, modelPrices)); // Ska logga 550
