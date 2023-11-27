@@ -56,3 +56,18 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 // Styla posts och comments på samma sätt som ovan.
 // tips: comments är kopplade till posts med postId
 
+const mainDiv2 = document.getElementById("postsWithComments")
+
+const request1 = fetch(" https://jsonplaceholder.typicode.com/posts").then(response => response.json());
+const request2 = fetch("https://jsonplaceholder.typicode.com/comments").then(response => response.json());
+
+Promise.all([request1, request2])
+    .then(([data1, data2]) => {
+        console.log(data1, data2);
+
+    })
+    .catch(error => {
+        console.error(error);
+
+    });
+
